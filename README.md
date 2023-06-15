@@ -1,3 +1,3 @@
-# DSA
+# DATA STRUCTURE 🧱🧭 & ALGORITHMS 💾🔍
 
 ## Sup🙂✌🏻
