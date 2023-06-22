@@ -19,6 +19,12 @@ def merge(A, p, q, r):
 
 def mergesort(A, p, r):
     # Complete the body of this function
+    if p < r:
+        q = (p+r)//2
+        mergesort(A,p,q)
+        mergesort(A,q+1,r)
+        merge(A,p,q,r)
+
     
 
 
