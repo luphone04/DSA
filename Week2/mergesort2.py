@@ -19,13 +19,16 @@ def merge(A, p, q, r):
 
 def mergesort(A, p, r):
     # Complete the body of this function
+        #A is OG list
+        #p is starting index
+        #r is ending index
+        #q the ending index of the first subarray 
+        #  and the starting index of the second subarray.
     if p < r:
-        q = (p+r)//2
+        q = (p+r)//2s
         mergesort(A,p,q)
         mergesort(A,q+1,r)
         merge(A,p,q,r)
-
-    
 
 
 

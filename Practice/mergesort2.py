@@ -1,36 +1,39 @@
 def mergesort(arr):
     if len(arr) > 1:
-        leftarr = arr[:len(arr)// 2 ] 
-        rightarr = arr[len(arr)//2 : ]
+        left_arr = arr[: len(arr)//2]
+        right_arr = arr[len(arr)//2 :]
 
         #recursion
-        mergesort(leftarr)
-        mergesort(rightarr)
+        mergesort(left_arr)
+        mergesort(right_arr)
+
         i = 0
         j = 0
         k = 0
-        while i < len(leftarr) and j < len(rightarr):
-            if leftarr[i] < rightarr[j]:
-                arr[k] = leftarr[i]
+        while i < len(left_arr) and j < len(right_arr):
+            if left_arr[i] < right_arr[j]:
+                arr[k] = left_arr[i]
                 i += 1
             else:
-                arr[k] = rightarr[j]
+                arr[k] = right_arr[j]
                 j += 1
-
             k += 1
-        while i < len(leftarr):
-            arr[k] = leftarr[i]
+
+        while i < len(left_arr):
+            arr[k] = left_arr[i]
             i += 1
             k += 1
-        while j < len(rightarr):
-            arr[k] = rightarr[j]
+        while j < len(right_arr):
+            arr[k] = right_arr[j]
             j += 1
             k += 1
-arr_test = [4 ,56,86, 54,96,26,75,33,65,76]
-import time
 
+
+arr_test = [56,34,12,78,43,90,1]
+import time
 st = time.process_time()
 mergesort(arr_test)
 et = time.process_time()
+
 print(arr_test)
 print(et - st)
