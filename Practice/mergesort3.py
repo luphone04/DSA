@@ -29,4 +29,4 @@ mergesort(a , 0 , len(a)- 1)
 
 et = time.process_time()
 print(a)
-print(et - st)s
+print(et - st)

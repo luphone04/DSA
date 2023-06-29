@@ -54,7 +54,7 @@ class heap:
     def buildHeap(self):
         for i in range((self.heapsize-1)//2, -1, -1):
             self.heapify(i)
-            
+
     def __init__(self, items=[], cmp=compare):
         self.a = items
         self.cmp = cmp
