@@ -1,7 +1,12 @@
+# 4 6 2 12 7 23 77 3
+# [2, 3, 4, 6, 7, 12, 23, 77]
+# 0.00023100000000000204
+
+
 def mergesort(arr):
     if len(arr) > 1:
-        left_arr = arr[: len(arr)//2]
-        right_arr = arr[len(arr)//2 :]
+        left_arr = arr[:len(arr)//2]
+        right_arr = arr[len(arr)//2:]
 
         #recursion
         mergesort(left_arr)
@@ -27,13 +32,20 @@ def mergesort(arr):
             arr[k] = right_arr[j]
             j += 1
             k += 1
+import time 
+a = list(map(int, input().split()))
 
-
-arr_test = [56,34,12,78,43,90,1]
-import time
 st = time.process_time()
-mergesort(arr_test)
+mergesort(a)
 et = time.process_time()
-
-print(arr_test)
+print(a)
 print(et - st)
+
+
+
+
+
+
+
+
+
