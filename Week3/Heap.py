@@ -10,8 +10,13 @@ The function is to be passed to the heap instantiation
 class heap:
     def compare(x, y):  # a default compare function for min heap
         return x < y
+    #x has higher priority than y in the min heap.
+    #y has higher priority than x in the min heap.
         
     def empty(self):
+        #The purpose of the empty method is to provide a convenient way to check the state of the heap.
+        #  It allows you to easily determine whether the heap is empty before performing any operations or 
+        # accessing elements from the heap.
         if self.heapsize == 0:
             return True
         else:
@@ -52,7 +57,8 @@ class heap:
                         # heap (index 0) or the comparison condition fails
                         
 
-    def extract(self): #
+    def extract(self): #The extract method serves the purpose of removing and returning the minimum or 
+                       #maximum element (depending on the type of heap) from the binary heap
         x = self.a[0] #Take the first element of the list self.a (which represents the root of the heap)
                       #and assign it to the variable x. This element will eventually be returned as 
                       # the extracted value from the heap.
@@ -70,9 +76,17 @@ class heap:
                       # satisfy the heap conditions.
         return x # Finally, return the extracted value x, which was stored from the initial root of the heap.
 
-    def buildHeap(self):
+    def buildHeap(self): # constructs a valid heap from an arbitrary list of elements by performing the 
+                          #heapify operation on each non-leaf node in a bottom-up manner.
         for i in range((self.heapsize-1)//2, -1, -1):
-            self.heapify(i)
+            #(self.heapsize-1)//2 calculates the index of the last non-leaf node(not last but not first 
+            # and have atleast one child)
+            #second -1 is the root (index 0)
+            #with a step of -1 to go in reverse order
+
+            self.heapify(i) #Call the heapify method on each index i within the loop. This performs the 
+                #heapify operation on the current element and its subtree, ensuring that the subtree satisfies 
+                # the heap property
 
     def __init__(self, items=[], cmp=compare):
         self.a = items
