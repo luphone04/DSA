@@ -64,7 +64,8 @@ class heap:
 
 
 
-'''
+import time 
+st = time.process_time()
 # Example class definition for heap's element and test code
 
 def myCompare(x, y):   # max heap
@@ -90,4 +91,6 @@ print()
 while not pq2.empty():
     print(pq2.extract().key, end=' ')
 
-'''
+et = time.process_time()
+print("\nrunning time:", et-st)
+
