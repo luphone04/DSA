@@ -22,7 +22,7 @@ class heap:
         else:
             return False
 
-    def heapify(self, i): #We want smaller one on the parent node indicie(the point of this function)
+    def heapify(self, i): #We want larger one on the parent node indicie(the point of this function)
         l = i*2+1 #left of indicies i
         r = (i+1)*2 #right of indicies i
         if l < self.heapsize and self.cmp(self.a[l],self.a[i]): #check if l is smaller than i
@@ -95,7 +95,7 @@ class heap:
         if len(self.a) > 0:
             self.buildHeap()
 
-
+# [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
 
 # import time 
 # st = time.process_time()
@@ -110,6 +110,7 @@ class heap:
 
 
 # testList = [i+100 for i in range(10)]
+
 
 # pq1 = heap(items=testList)   # default as min heap for a list of numbers
 # pq2 = heap(cmp=myCompare)  # custom class item with custom compare function
