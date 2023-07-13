@@ -20,25 +20,56 @@ def show_hash_table():
     print('-------------------')
 
 def hash_func(s):
-    # return the hash value
+    char_lst = []
+    value = 0
+    for char in s:
+        char_lst.append(char)
+    for each in char_lst:
+        value += ord(each)
+    return value%table_size
     
 
 def insert(s, v):
     # return 0 on successful insertion
     # return -1 if s has already been in the hash table
+    if search(s) != -1:
+      return -1
+    h = hash_func(s)
+    hash_table[h].insert(0,(s,v))
+    return 0
 
 def search(s):
     # return value of the key or
     # return -1 if s does not exists in hash table
+    hash_val = hash_func(s)
+    for item in hash_table[hash_val]:
+        if item[0] == s:
+            return item[1]
+    return -1
 
 def delete(s):
     # return 0 on successful deletion
     # return -1 if s does not exists in hash table
+    if search(s) == -1:
+        return -1
+    hash_val = hash_func(s)
+    for i in range(len(hash_table[hash_val])):
+        if hash_table[hash_val] == s:
+            del hash_table[hash_val][i]
+            return 0
 
 
 # The main program to execute the sequence of operations
 for op in operations:
     # op[0] is "insert" or "search" or "delete"
+    if op[0] == "insert":
+        print(insert(op[1],op[2]))
+        show_hash_table()
+    elif op[0] == "search":
+        print(search(op[1]))
+    elif op[0] == "delete":
+        print(delete(op[1]))
+        show_hash_table()
 
 
     
