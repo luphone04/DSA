@@ -1,4 +1,4 @@
-from sys import stdin
+from sys import stdin # allows you to read lines from stdin without knowing the number of lines in advance 
 
 
 # Read the sequence of operations to be operated on the hash table
