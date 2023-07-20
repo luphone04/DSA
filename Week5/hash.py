@@ -1,5 +1,5 @@
 from sys import stdin # allows you to read lines from stdin without knowing the number of lines in advance 
-
+#stdin is a file object that is used to read data from the standard input stream, sys.stdin is a file-like object on which you can call functions read or readlines
 
 # Read the sequence of operations to be operated on the hash table
 operations = []
