@@ -25,7 +25,7 @@ def mergesort(A, p, r):
         #q the ending index of the first subarray 
         #  and the starting index of the second subarray.
     if p < r:
-        q = (p+r)//2s
+        q = (p+r)
         mergesort(A,p,q)
         mergesort(A,q+1,r)
         merge(A,p,q,r)
