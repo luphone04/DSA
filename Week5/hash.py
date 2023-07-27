@@ -3,7 +3,7 @@ from sys import stdin # allows you to read lines from stdin without knowing the 
 
 # Read the sequence of operations to be operated on the hash table
 operations = []
-for line in stdin:
+for line in stdin: 
     line = line.split()
     if len(line) > 2:
         line[2] = int(line[2])
