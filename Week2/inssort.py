@@ -15,10 +15,6 @@ for i in range(1, n): #n=5, i=1,2,3,4
         a[j+1] = a[j]
         j -= 1
     a[j+1] = key
-
-  
-
-    
 et = time.process_time()
 
 print(a)

@@ -95,36 +95,36 @@ class heap:
         if len(self.a) > 0:
             self.buildHeap()
 
-# [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
+[100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
 
-# import time 
-# st = time.process_time()
-# # Example class definition for heap's element and test code
+import time 
+st = time.process_time()
+# Example class definition for heap's element and test code
 
-# def myCompare(x, y):   # max heap
-#     return x.key > y.key
+def myCompare(x, y):   # max heap
+    return x.key > y.key
 
-# class myClass:
-#     def __init__(self, k):
-#         self.key = k
-
-
-# testList = [i+100 for i in range(10)]
+class myClass:
+    def __init__(self, k):
+        self.key = k
 
 
-# pq1 = heap(items=testList)   # default as min heap for a list of numbers
-# pq2 = heap(cmp=myCompare)  # custom class item with custom compare function
+testList = [i+100 for i in range(10)]
 
-# for v in testList:
-#     pq2.insert(myClass(v))
 
-# while not pq1.empty():
-#     print(pq1.extract(), end=' ')
-# print()
+pq1 = heap(items=testList)   # default as min heap for a list of numbers
+pq2 = heap(cmp=myCompare)  # custom class item with custom compare function
 
-# while not pq2.empty():
-#     print(pq2.extract().key, end=' ')
+for v in testList:
+    pq2.insert(myClass(v))
 
-# et = time.process_time()
-# print("\nrunning time:", et-st)
+while not pq1.empty():
+    print(pq1.extract(), end=' ')
+print()
+
+while not pq2.empty():
+    print(pq2.extract().key, end=' ')
+
+et = time.process_time()
+print("\nrunning time:", et-st)
 
