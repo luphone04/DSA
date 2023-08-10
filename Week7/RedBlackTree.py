@@ -309,5 +309,35 @@ class RBTree():
 
 
 
+#Test Code with time import 
+
+import time
+st = time.process_time()
+
+#insert 5 into newly created red black tree
+rb = RBTree()
+rb.insert(5)
+rb.insert(10)
+rb.insert(15)
+rb.insert(20)
+rb.insert(25)
+rb.insert(30)
+rb.insert(35)
+rb.insert(40)
+rb.insert(45)
+rb.insert(50)
+rb.insert(55)
+rb.print_RBTree()
+rb.delete(35)
+print("-------------------------")
+print("After deleting 35")
+rb.print_RBTree()
+
+
+
+
+
+
+
 
 
