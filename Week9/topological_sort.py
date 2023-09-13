@@ -32,12 +32,7 @@ def topological_sort(V, adj):
 # The next E lines contain two integers u and v, denoting that there is an edge from u to v.
 # Output: A single line containing the vertices of the graph in topological order.
 #Code
-V, E = map(int, input().split()) #takes the number of vertices and edges as input
-adj = [[] for _ in range(V)] #create "V" empty lists 
-for _ in range(E): #takes the edges as input
-    u, v = map(int, input().split())  #takes the vertices of the edge as input  
-    adj[u].append(v) #adds the vertex v to the adjacency list of vertex u
-print(*topological_sort(V, adj)) #calls the topological_sort function and prints the result
+ #calls the topological_sort function and prints the result
 #The printed result is the topological order of the graph in the input  
 
 # Sample Input:
