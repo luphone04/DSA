@@ -10,3 +10,39 @@ Undirected Graph
 4 2
 3 1
 6 1
+
+
+Undirected Graph
+Vertices (V): 6
+Edges (E): 10
+
+Edge List:
+
+Edge (2, 6)
+Edge (5, 3)
+Edge (5, 6)
+Edge (3, 4)
+Edge (5, 1)
+Edge (3, 6)
+Edge (1, 4)
+Edge (4, 2)
+Edge (3, 1)
+Edge (6, 1)
+
+Adjacency List:
+1 -> [4]
+2 -> [6]
+3 -> [4, 6, 1]
+4 -> [2]
+5 -> [3, 6, 1]
+6 -> [10, 1]
+
+adjacency_list = [
+    [],          # Vertex 0
+    [4],         # Vertex 1
+    [6],         # Vertex 2
+    [4, 6, 1],   # Vertex 3
+    [2],         # Vertex 4
+    [3, 6, 1],   # Vertex 5
+    [10, 1]      # Vertex 6
+]
