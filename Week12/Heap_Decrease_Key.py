@@ -80,7 +80,7 @@ class heap:
         if len(self.a) > 0:
             self.buildHeap()
 
-'''
+
 
 # Example class definition for heap's element and test code
 
@@ -98,6 +98,5 @@ pq2.elevate_key(5, 1000)
 while not pq2.empty():
     print(testList[pq2.extract()].key, end=' ')
 
-'''
 
 

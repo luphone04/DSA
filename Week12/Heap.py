@@ -64,7 +64,7 @@ class heap:
 
 
 
-'''
+
 # Example class definition for heap's element and test code
 
 def myCompare(x, y):   # max heap
@@ -90,4 +90,4 @@ print()
 while not pq2.empty():
     print(pq2.extract().key, end=' ')
 
-'''
+
